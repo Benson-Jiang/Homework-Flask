@@ -7,4 +7,21 @@
 		<li> t </li>
 	</ul>
 	{% endfor %}
+	<form action ="" method = "POST"novalidate>
+		<p>
+			{{ form.city_name.label }} <br>
+			{{ form.city_name(size = 32) }}
+		</p>
+		<p>
+			{{ form.city_rank.label }} <br>
+			{{ form.city_rank(size = 32) }}
+		</p>
+		<p>
+			{{ form.is_visited.label }}
+			{{ form.is_visited() }}
+		</p>
+		<p>
+			{{ form.submit() }}
+		</p>
+	</form>
 {% endblock %}
