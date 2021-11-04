@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField
+from wtforms.validators import DataRequired
 
 class TopCities(FlaskForm):
-	city_name = StringField("City Name", validator = [DataRequired()])
-	city_rank = IntegerField("City Rank", validator = [DataRequired()])
+	city_name = StringField("City Name", validators = [DataRequired()])
+	city_rank = IntegerField("City Rank", validators = [DataRequired()])
 	is_visited = BooleanField("Visited")
 	submit = SubmitField("Submit")
 
