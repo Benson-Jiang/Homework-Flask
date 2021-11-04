@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1> Welcome {{ name }}, here are top destinations! </h1>
+	{% for t in top_cities %}
+	<ul> 
+		<li> t </li>
+	</ul>
+	{% endfor %}
 {% endblock %}
